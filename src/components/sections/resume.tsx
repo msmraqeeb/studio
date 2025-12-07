@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Building2 } from "lucide-react";
 
 const education = [
   {
@@ -22,6 +22,40 @@ const education = [
   },
 ];
 
+const experience = [
+  {
+    period: "Feb 2017 - Aug 2020",
+    title: "Deputy Manager (E-Commerce)",
+    company: "mother's care",
+    description: [
+      "Work as the E-commerce Project Manager.",
+      "Identify new trends in digital marketing, evaluate new technologies and ensure the brand is at the forefront of industry developments, particularly developments in mobile marketing.",
+      "Help the team to manage and maintain the company's Social media toolsand to write and optimize content for the social networking accounts such as Facebook, Twitter, Linked In and Instagram."
+    ],
+  },
+  {
+    period: "Jan 2015 - Dec 2016",
+    title: "IT & ADMIN-in Charge",
+    company: "Sumona Housing Ltd.",
+    description: [
+        "Installing, configuring, troubleshooting operating systems, softwares, system management tools, network printers, scanners etc.",
+        "Check LAN connectivity & troubleshooting accordingly",
+        "Installing & configuring operating System, application software and others 3rd party software"
+    ]
+  },
+  {
+    period: "July 2013 - Dec 2014",
+    title: "RJ, Program Producer & Co-ordinator IT",
+    company: "Radio Bhumi 92.8 FM",
+    description: [
+      "Program producing and presenting",
+      "Program presenting (RJ)",
+      "Website maintaining"
+    ]
+  }
+];
+
+
 export default function Resume() {
   return (
     <section id="resume" className="w-full py-20 md:py-32">
@@ -34,31 +68,67 @@ export default function Resume() {
             A SUMMARY OF MY RESUME
           </h2>
         </div>
-        <div className="mt-12">
-          <div className="flex items-center gap-4 mb-8">
-            <GraduationCap className="h-8 w-8 text-primary" />
-            <h3 className="text-3xl font-bold font-headline">My Education</h3>
-          </div>
-          <div className="relative pl-6">
-            <div className="absolute left-[35px] top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
-            {education.map((item, index) => (
-              <div key={index} className="relative flex items-start gap-6 mb-8">
-                <div className="flex-shrink-0">
-                  <div className="relative">
-                    <div className="absolute left-1/2 top-0 h-full w-0.5 bg-transparent"></div>
-                    <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-card ring-4 ring-primary">
-                      <GraduationCap className="h-7 w-7 text-primary" />
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-1 gap-16">
+          <div>
+            <div className="flex items-center gap-4 mb-8">
+              <GraduationCap className="h-8 w-8 text-primary" />
+              <h3 className="text-3xl font-bold font-headline">My Education</h3>
+            </div>
+            <div className="relative pl-6">
+              <div className="absolute left-[35px] top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
+              {education.map((item, index) => (
+                <div key={index} className="relative flex items-start gap-6 mb-8">
+                  <div className="flex-shrink-0">
+                    <div className="relative">
+                      <div className="absolute left-1/2 top-0 h-full w-0.5 bg-transparent"></div>
+                      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-card ring-4 ring-primary">
+                        <GraduationCap className="h-7 w-7 text-primary" />
+                      </div>
                     </div>
                   </div>
+                  <div className="flex-grow rounded-lg bg-card p-6 shadow-sm">
+                    <p className="mb-2 text-sm text-muted-foreground">{item.period}</p>
+                    <h4 className="text-xl font-bold font-headline mb-1">{item.degree}</h4>
+                    <p className="text-primary font-semibold mb-3">{item.institution}</p>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </div>
                 </div>
-                <div className="flex-grow rounded-lg bg-card p-6 shadow-sm">
-                  <p className="mb-2 text-sm text-muted-foreground">{item.period}</p>
-                  <h4 className="text-xl font-bold font-headline mb-1">{item.degree}</h4>
-                  <p className="text-primary font-semibold mb-3">{item.institution}</p>
-                  <p className="text-muted-foreground">{item.description}</p>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <div className="flex items-center gap-4 mb-8">
+              <Building2 className="h-8 w-8 text-primary" />
+              <h3 className="text-3xl font-bold font-headline">My Experience</h3>
+            </div>
+            <div className="relative pl-6">
+              <div className="absolute left-[35px] top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
+              {experience.map((item, index) => (
+                <div key={index} className="relative flex items-start gap-6 mb-8">
+                  <div className="flex-shrink-0">
+                    <div className="relative">
+                      <div className="absolute left-1/2 top-0 h-full w-0.5 bg-transparent"></div>
+                      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-card ring-4 ring-primary">
+                        <Building2 className="h-7 w-7 text-primary" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-grow rounded-lg bg-card p-6 shadow-sm">
+                    <p className="mb-2 text-sm text-muted-foreground">{item.period}</p>
+                    <h4 className="text-xl font-bold font-headline mb-1">{item.title}</h4>
+                    <p className="text-primary font-semibold mb-3">{item.company}</p>
+                    <ul className="list-disc pl-5 text-muted-foreground space-y-2">
+                      {Array.isArray(item.description) ? (
+                        item.description.map((desc, i) => <li key={i}>{desc}</li>)
+                      ) : (
+                        <li>{item.description}</li>
+                      )}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
