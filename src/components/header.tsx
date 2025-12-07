@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
@@ -68,7 +67,6 @@ export default function Header() {
                 Apex Portfolio
             </Link>
           </div>
-          <ThemeToggle />
         </div>
       </div>
     </header>
