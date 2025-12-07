@@ -14,9 +14,9 @@ const projects = [
   },
   {
     id: 'project-2',
-    title: 'SaaS Dashboard UI',
-    description: 'A sleek and modern user interface for a software-as-a-service application, focusing on usability and a clean aesthetic.',
-    tags: ['UI/UX', 'Figma', 'Tailwind'],
+    title: 'InVEST USA',
+    description: 'InVEST USA is a U.S.-based nonprofit whose website describes their mission as providing free body armor to first responders — police officers, firefighters, and emergency personnel — at no cost to them or their agencies.',
+    tags: ['Custom'],
   },
   {
     id: 'project-3',

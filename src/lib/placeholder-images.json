@@ -14,9 +14,9 @@
     },
     {
       "id": "project-2",
-      "description": "A modern web application dashboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1669023414166-a4cc7c0fe1f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3ZWIlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzY1MDc5NDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "web dashboard"
+      "description": "A website for InVEST USA.",
+      "imageUrl": "/images/investusa.jpg",
+      "imageHint": "nonprofit website"
     },
     {
       "id": "project-3",
