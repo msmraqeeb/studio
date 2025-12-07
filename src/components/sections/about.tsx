@@ -14,8 +14,8 @@ export default function About() {
             KNOW ME MORE
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mt-12">
-          <div className="md:col-span-3 space-y-6 text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mt-12 items-center">
+          <div className="lg:col-span-3 space-y-6 text-center lg:text-left">
             <h3 className="text-2xl sm:text-3xl font-bold">
               I'm <span className="text-primary">Shakil Mahmud</span>, a Living Creative Leader
             </h3>
@@ -23,7 +23,7 @@ export default function About() {
               I am a passionate developer with a knack for creating elegant, efficient, and user-friendly digital experiences. With a strong foundation in both front-end and back-end technologies, I specialize in bringing ideas to life from concept to deployment. My goal is to always build products that provide pixel-perfect, performant experiences. By hiring me you can utilize my multi section skills so that your team will boost than before.
             </p>
           </div>
-          <div className="md:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-6 flex flex-col items-center lg:items-start">
             <ul className="space-y-4 text-lg">
               <li>
                 <span className="font-semibold">Name:</span> Shakil Mahmud
