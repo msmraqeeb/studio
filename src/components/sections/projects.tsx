@@ -96,6 +96,9 @@ export default function Projects() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
             MY WORK
           </h2>
+          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            Here are some of the projects I'm proud to have worked on.
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
           {projects.map(project => {
