@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import TypingAnimation from '@/components/typing-animation';
 
 // To use your own image, update the path below.
 // For example: const heroImage = { imageUrl: '/images/Shakil-Mahmud.jpeg', description: 'Shakil Mahmud' };
@@ -39,9 +40,7 @@ export default function Hero() {
                 Hello! 👋 I Am <br />
                 <span className="text-primary">Shakil Mahmud</span>
               </h1>
-              <p className="text-2xl font-semibold text-muted-foreground">
-                I am a Software Engineer
-              </p>
+              <TypingAnimation />
             </div>
             <p className="max-w-[600px] text-muted-foreground md:text-lg">
               I'm a passionate and creative full-stack developer, dedicated to
