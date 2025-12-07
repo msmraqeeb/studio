@@ -13,48 +13,6 @@ const tools = [
     tags: ['Next'],
     link: 'https://quickscribeai.vercel.app/',
   },
-  {
-    id: 'tool-vscode',
-    title: 'VS Code',
-    description: 'My go-to editor for code.',
-    tags: ['Editor'],
-    link: 'https://code.visualstudio.com/',
-  },
-  {
-    id: 'tool-git',
-    title: 'Git & GitHub',
-    description: 'For version control and collaboration.',
-    tags: ['VCS'],
-    link: 'https://github.com/',
-  },
-  {
-    id: 'tool-figma',
-    title: 'Figma',
-    description: 'For design mockups and UI/UX.',
-    tags: ['Design'],
-    link: 'https://www.figma.com/',
-  },
-  {
-    id: 'tool-slack',
-    title: 'Slack',
-    description: 'For team communication.',
-    tags: ['Communication'],
-    link: 'https://slack.com/',
-  },
-  {
-    id: 'tool-postman',
-    title: 'Postman',
-    description: 'For API testing and development.',
-    tags: ['API'],
-    link: 'https://www.postman.com/',
-  },
-  {
-    id: 'tool-jira',
-    title: 'Jira',
-    description: 'For project management and tracking.',
-    tags: ['Project Management'],
-    link: 'https://www.atlassian.com/software/jira',
-  },
 ];
 
 export default function Tools() {
