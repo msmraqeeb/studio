@@ -11,36 +11,42 @@ const projects = [
     title: 'Lakewood Of Strathmore',
     description: 'Live in Lakewood is a website promoting a modern lakeside residential community featuring waterfront homes, nature amenities, and an active outdoor lifestyle.',
     tags: ['Wix'],
+    link: 'https://liveinlakewood.ca/',
   },
   {
     id: 'project-2',
     title: 'InVEST USA',
     description: 'InVEST USA is a U.S.-based nonprofit whose website describes their mission as providing free body armor to first responders — police officers, firefighters, and emergency personnel — at no cost to them or their agencies.',
     tags: ['Custom'],
+    link: 'https://investusa.org/',
   },
   {
     id: 'project-3',
     title: 'Mobile Banking App',
     description: 'A secure and intuitive mobile application for personal finance management, built with a focus on user experience.',
     tags: ['React Native', 'Firebase', 'Security'],
+    link: '#',
   },
   {
     id: 'project-4',
     title: 'E-commerce Storefront',
     description: 'A high-performance online store with a custom headless CMS, designed for a seamless shopping experience.',
     tags: ['Shopify', 'Next.js', 'GraphQL'],
+    link: '#',
   },
   {
     id: 'project-5',
     title: 'AI Chatbot Integration',
     description: 'An intelligent chatbot for customer support, integrated with a live-chat feature and knowledge base.',
     tags: ['GenAI', 'Next.js', 'Vercel'],
+    link: '#',
   },
   {
     id: 'project-6',
     title: 'Project Management Tool',
     description: 'A collaborative tool for teams to manage tasks, track progress, and communicate effectively.',
     tags: ['React', 'Node.js', 'Websockets'],
+    link: '#',
   },
 ];
 
@@ -63,7 +69,7 @@ export default function Projects() {
             const projectImage = PlaceHolderImages.find(img => img.id === project.id);
             return (
               <Card key={project.id} className="overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-                <Link href="#" className="block">
+                <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block">
                   <CardHeader className="p-0">
                     {projectImage && (
                       <Image
