@@ -13,6 +13,9 @@ export default function About() {
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
             KNOW ME MORE
           </h2>
+          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            Here's a bit about my background and what motivates me.
+          </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mt-12 items-center">
           <div className="lg:col-span-3 space-y-6 text-center lg:text-left">

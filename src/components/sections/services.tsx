@@ -45,6 +45,9 @@ export default function Services() {
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
             MY SERVICES
           </h2>
+          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            I provide a wide range of creative and technical services to help your business succeed.
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 mt-12">
           {services.map((service, index) => (

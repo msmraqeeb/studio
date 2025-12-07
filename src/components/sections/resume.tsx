@@ -97,6 +97,9 @@ export default function Resume() {
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
             A SUMMARY OF MY RESUME
           </h2>
+          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            A brief overview of my education and professional experience.
+          </p>
         </div>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-1 gap-16">
           <div>
