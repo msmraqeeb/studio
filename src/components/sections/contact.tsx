@@ -16,6 +16,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Mail, Github, Linkedin, Facebook } from "lucide-react";
+import Link from "next/link";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -51,46 +54,90 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="contact" className="w-full py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-              Get In Touch
-            </h2>
-            <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Have a question or want to work together? Drop me a line.
-            </p>
+        <div className="flex flex-col items-center space-y-6 text-center mb-12">
+          <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
+            CONTACT
+          </Badge>
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
+            GET IN TOUCH
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold font-headline mb-4">Find Me</h3>
+              <p className="text-muted-foreground">
+                Please feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <MapPin className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold">Location</h4>
+                  <p className="text-muted-foreground">Dhaka, Bangladesh</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Mail className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold">Email</h4>
+                  <a href="mailto:msmraqeeb@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    msmraqeeb@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold font-headline mb-4">Follow Me</h3>
+              <div className="flex gap-4">
+                <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="h-7 w-7" />
+                </Link>
+                <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="h-7 w-7" />
+                </Link>
+                <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Facebook className="h-7 w-7" />
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="mx-auto w-full max-w-lg pt-8">
+
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold font-headline">Contact Me</h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your Name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="your@email.com" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your Name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your Email" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
                 <FormField
                   control={form.control}
                   name="message"
@@ -99,8 +146,8 @@ export default function Contact() {
                       <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell me a little bit about your project..."
-                          className="min-h-[120px]"
+                          placeholder="Tell me more about your needs..."
+                          className="min-h-[150px]"
                           {...field}
                         />
                       </FormControl>
@@ -108,7 +155,7 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg" className="w-full">Send Message</Button>
+                <Button type="submit" size="lg" className="rounded-full">Send Message</Button>
               </form>
             </Form>
           </div>
