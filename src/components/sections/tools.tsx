@@ -1,36 +1,59 @@
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { GitFork, Terminal, Figma, Slack, AtSign, Settings } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
 const tools = [
   {
-    icon: <Terminal className="h-8 w-8 text-primary" />,
-    name: 'VS Code',
+    id: 'tool-1',
+    title: 'QuickScribe AI',
+    description: 'QuickScribe AI — a web-based tool that automatically converts spoken or recorded patient conversations into structured medical documentation (i.e. ready-to-sign clinical notes).',
+    tags: ['Next'],
+    link: 'https://quickscribeai.vercel.app/',
+  },
+  {
+    id: 'tool-vscode',
+    title: 'VS Code',
     description: 'My go-to editor for code.',
+    tags: ['Editor'],
+    link: 'https://code.visualstudio.com/',
   },
   {
-    icon: <GitFork className="h-8 w-8 text-primary" />,
-    name: 'Git & GitHub',
+    id: 'tool-git',
+    title: 'Git & GitHub',
     description: 'For version control and collaboration.',
+    tags: ['VCS'],
+    link: 'https://github.com/',
   },
   {
-    icon: <Figma className="h-8 w-8 text-primary" />,
-    name: 'Figma',
+    id: 'tool-figma',
+    title: 'Figma',
     description: 'For design mockups and UI/UX.',
+    tags: ['Design'],
+    link: 'https://www.figma.com/',
   },
   {
-    icon: <Slack className="h-8 w-8 text-primary" />,
-    name: 'Slack',
+    id: 'tool-slack',
+    title: 'Slack',
     description: 'For team communication.',
+    tags: ['Communication'],
+    link: 'https://slack.com/',
   },
   {
-    icon: <AtSign className="h-8 w-8 text-primary" />,
-    name: 'Postman',
+    id: 'tool-postman',
+    title: 'Postman',
     description: 'For API testing and development.',
+    tags: ['API'],
+    link: 'https://www.postman.com/',
   },
   {
-    icon: <Settings className="h-8 w-8 text-primary" />,
-    name: 'Jira',
+    id: 'tool-jira',
+    title: 'Jira',
     description: 'For project management and tracking.',
+    tags: ['Project Management'],
+    link: 'https://www.atlassian.com/software/jira',
   },
 ];
 
@@ -49,16 +72,42 @@ export default function Tools() {
             The tools and software I use to bring projects to life.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 mt-12">
-          {tools.map((tool) => (
-            <div key={tool.name} className="flex items-start space-x-6">
-               <div className="flex-shrink-0">{tool.icon}</div>
-               <div className="flex-grow">
-                <h3 className="text-xl font-bold font-headline mb-2">{tool.name}</h3>
-                <p className="text-muted-foreground">{tool.description}</p>
-              </div>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
+          {tools.map(tool => {
+            const toolImage = PlaceHolderImages.find(img => img.id === tool.id);
+            return (
+              <Card key={tool.id} className="overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                <Link href={tool.link} target="_blank" rel="noopener noreferrer" className="block">
+                  <CardHeader className="p-0">
+                    {toolImage && (
+                      <Image
+                        src={toolImage.imageUrl}
+                        alt={toolImage.description}
+                        data-ai-hint={toolImage.imageHint}
+                        width={600}
+                        height={400}
+                        className="object-cover w-full h-auto aspect-video"
+                      />
+                    )}
+                  </CardHeader>
+                  <div className="p-6">
+                    <CardTitle className="font-headline text-2xl flex items-center justify-between">
+                      {tool.title}
+                      <ArrowUpRight className="h-6 w-6 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </CardTitle>
+                    <CardDescription className="mt-2">{tool.description}</CardDescription>
+                  </div>
+                  <CardFooter>
+                    <div className="flex flex-wrap gap-2">
+                      {tool.tags.map(tag => (
+                        <Badge key={tag} variant="secondary">{tag}</Badge>
+                      ))}
+                    </div>
+                  </CardFooter>
+                </Link>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
