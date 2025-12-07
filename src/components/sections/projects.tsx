@@ -8,9 +8,9 @@ import { ArrowUpRight } from 'lucide-react';
 const projects = [
   {
     id: 'project-1',
-    title: 'Data Analytics Platform',
-    description: 'A comprehensive platform for real-time data visualization and business intelligence, helping teams make informed decisions.',
-    tags: ['Next.js', 'React', 'D3.js'],
+    title: 'Lakewood Of Strathmore',
+    description: 'Live in Lakewood is a website promoting a modern lakeside residential community featuring waterfront homes, nature amenities, and an active outdoor lifestyle.',
+    tags: ['Wix'],
   },
   {
     id: 'project-2',
