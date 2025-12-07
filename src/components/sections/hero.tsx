@@ -2,13 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import TypingAnimation from '@/components/typing-animation';
 
-// To use your own image, update the path below.
-// For example: const heroImage = { imageUrl: '/images/Shakil-Mahmud.jpeg', description: 'Shakil Mahmud' };
-// If you do this, you can remove the PlaceHolderImages import and the find method.
-const heroImage = PlaceHolderImages.find(img => img.id === 'avatar');
+const heroImage = { imageUrl: '/images/Shakil-Mahmud.jpeg', description: 'Shakil Mahmud' };
 
 export default function Hero() {
   return (
@@ -20,10 +16,8 @@ export default function Hero() {
             <div className="absolute w-[280px] h-[420px] sm:w-[350px] sm:h-[525px] bg-secondary rounded-3xl transform rotate-12 transition-all duration-300"></div>
             {heroImage && (
               <Image
-                // To use your own image, change the src to '/images/Shakil-Mahmud.jpeg'
                 src={heroImage.imageUrl}
                 alt={heroImage.description}
-                data-ai-hint={heroImage.imageHint}
                 width={320}
                 height={480}
                 className="rounded-2xl object-cover aspect-[3/4] z-10 shadow-2xl"
