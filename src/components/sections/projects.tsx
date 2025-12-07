@@ -36,17 +36,17 @@ const projects = [
   },
   {
     id: 'project-5',
-    title: 'AI Chatbot Integration',
-    description: 'An intelligent chatbot for customer support, integrated with a live-chat feature and knowledge base.',
-    tags: ['GenAI', 'Next.js', 'Vercel'],
-    link: '#',
+    title: 'Kids Paradise',
+    description: 'Kids Paradise is an online store (with a physical shop in Dhaka) selling baby products, children’s clothes, toys, and related kids-items.',
+    tags: ['Wordpress'],
+    link: 'https://kidsparadise.com.bd/',
   },
   {
     id: 'project-6',
-    title: 'Project Management Tool',
-    description: 'A collaborative tool for teams to manage tasks, track progress, and communicate effectively.',
-    tags: ['React', 'Node.js', 'Websockets'],
-    link: '#',
+    title: 'CorneliusDavisJr',
+    description: 'CorneliusDavisJr.com — a website offering financial coaching, planning, and advice services, with blog content and options like one-on-one coaching, home-buyer support, and comprehensive financial plans.',
+    tags: ['Wordpress'],
+    link: 'https://corneliusdavisjr.com/',
   },
 ];
 
