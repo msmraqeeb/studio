@@ -93,13 +93,13 @@ export default function Contact() {
             <div>
               <h3 className="text-2xl font-bold font-headline mb-4">Follow Me</h3>
               <div className="flex gap-4">
-                <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="https://github.com/msmraqeeb" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github className="h-7 w-7" />
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="https://www.linkedin.com/in/msmraqeeb/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin className="h-7 w-7" />
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="https://www.facebook.com/shakilmahmud.rj/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Facebook className="h-7 w-7" />
                 </Link>
               </div>
