@@ -5,7 +5,7 @@ import './globals.css';
 import FloatingMenu from '@/components/floating-menu';
 
 export const metadata: Metadata = {
-  title: 'Apex Portfolio',
+  title: 'Shakil Mahmud',
   description: 'A professional, modern portfolio to showcase your work and skills.',
 };
 
