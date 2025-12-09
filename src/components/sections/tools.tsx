@@ -13,6 +13,13 @@ const tools = [
     tags: ['Next'],
     link: 'https://quickscribeai.vercel.app/',
   },
+  {
+    id: 'tool-2',
+    title: 'Euro IT Accounts',
+    description: 'Euro IT Accounts is a simple, web-based financial tracking app designed to help users manage expenses, income, and account records efficiently.',
+    tags: ['Next'],
+    link: 'https://euro-it-accounts.vercel.app/',
+  },
 ];
 
 export default function Tools() {
